@@ -19,7 +19,6 @@ import 'package:pakfiver/pages/profile.dart';
 import 'package:pakfiver/pages/usermain.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pakfiver/login.dart';
-import 'package:pakfiver/provider/exchange_homePage.dart';
 import 'package:pakfiver/provider/gigprovider.dart';
 import 'package:pakfiver/provider/requesrProvider.dart';
 import 'package:pakfiver/provider/userDataProvider.dart';
@@ -62,10 +61,8 @@ class _MyDrawerState extends State<MyDrawer> {
   File? selectedImage;
   final picker = ImagePicker();
 
-  late ExchangeProvider _exchangeProvider;
   @override
   Widget build(BuildContext context) {
-    _exchangeProvider=Provider.of(context);
     var data = widget.userProvider.currentUserData;
     UserMode usrmode=Provider.of<UserMode>(context);
     RequestProvider requestProvider=Provider.of(context);

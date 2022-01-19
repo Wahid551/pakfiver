@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:pakfiver/pages/home.dart';
-import 'package:pakfiver/provider/exchange_homePage.dart';
+
 import 'package:pakfiver/provider/gigprovider.dart';
 import 'package:pakfiver/provider/notification_provider.dart';
 import 'package:pakfiver/provider/requesrProvider.dart';
@@ -40,9 +40,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider<Notification_provider>(
           create: (context) => Notification_provider(),
         ),
-        ChangeNotifierProvider<ExchangeProvider>(
-          create: (context) => ExchangeProvider(),
-        ),
+
 
       ],
       child: MaterialApp(

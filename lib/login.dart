@@ -6,7 +6,6 @@ import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:pakfiver/pages/buyersHomePage.dart';
 import 'package:pakfiver/pages/usermain.dart';
-import 'package:pakfiver/provider/exchange_homePage.dart';
 import 'package:pakfiver/provider/gigprovider.dart';
 import 'package:pakfiver/provider/usermode.dart';
 import 'package:provider/provider.dart';
@@ -22,7 +21,6 @@ class _LoginState extends State<Login> {
   final _formkey = GlobalKey<FormState>();
   var email = "";
   var password = "";
-  late ExchangeProvider _exchangeProvider;
 
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
@@ -50,7 +48,7 @@ class _LoginState extends State<Login> {
       );
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      _exchangeProvider.gigHomePage==false?
+      usrmode.gigHomePage==false?
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -95,10 +93,9 @@ class _LoginState extends State<Login> {
     passwordController.dispose();
     super.dispose();
   }
-
+  late UserMode usrmode;
   Widget build(BuildContext context) {
-    _exchangeProvider=Provider.of(context);
-    UserMode usrmode=Provider.of<UserMode>(context);
+     usrmode=Provider.of<UserMode>(context);
     bool status=usrmode.status;
     GigProvider _gigProvider=Provider.of<GigProvider>(context);
     _gigProvider.getData();
