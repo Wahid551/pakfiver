@@ -327,6 +327,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   Padding(
                     padding: EdgeInsets.fromLTRB(15.0, 7.0, 0.0, 0.0),
                     child: TextFormField(
+                      obscureText: true,
                       decoration: InputDecoration(
                           labelText: 'Password ',
                           labelStyle: TextStyle(
@@ -349,6 +350,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   Padding(
                     padding: EdgeInsets.fromLTRB(15.0, 7.0, 0.0, 0.0),
                     child: TextFormField(
+                      obscureText: true,
                       decoration: InputDecoration(
                           labelText: 'Confirm Password ',
                           labelStyle: TextStyle(

@@ -53,7 +53,7 @@ class _RequestPagesState extends State<RequestPages> {
       };
 
       chat.addChatRoom(chatRoomId, chatRoomMap).then((value) {
-        _notiProvider.addData(userUid,myName,"respond at your post request");
+        _notiProvider.addData(userUid,myName,"respond at your post request",'');
         Navigator.of(context).pop();
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MessageInboxPage()));
       });

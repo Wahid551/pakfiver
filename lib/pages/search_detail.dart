@@ -63,7 +63,7 @@ class _DetailsState extends State<Details> {
       };
 
       chat.addChatRoom(chatRoomId, chatRoomMap).then((value){
-        _notifyProvider.addData(userUid, myName, "respond at your gig");
+        _notifyProvider.addData(userUid, myName, "respond at your gig",widget.title);
         Navigator.of(context).pop();
         Navigator.of(context).push(MaterialPageRoute(builder: (context)=>MessageInboxPage()));
       });

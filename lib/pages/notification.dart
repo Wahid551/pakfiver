@@ -154,6 +154,14 @@ class _NotificationsState extends State<Notifications> {
                               FontWeight.bold,
                         ),
                       ),
+                      subtitle: Text(dat.title??'',style: TextStyle(
+                        color:
+
+                        Colors.black87,
+                        fontSize: 14.0,
+                        fontWeight:
+                        FontWeight.bold,
+                      ),),
                     ),
                   ),
                 ),

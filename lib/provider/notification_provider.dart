@@ -9,9 +9,10 @@ class Notification_provider extends ChangeNotifier{
     FirebaseFirestore _user=FirebaseFirestore.instance;
 
 
-   void addData(String UserId,String name,String data)async{
+   void addData(String UserId,String name,String data,String title)async{
      await FirebaseFirestore.instance.collection("Notifications").doc(UserId).collection("MyNotifications").add({
        'notification':'$name $data',
+       'title':title,
        'time':DateTime.now(),
      });
      notifyListeners();
@@ -24,7 +25,7 @@ class Notification_provider extends ChangeNotifier{
          QuerySnapshot data=await  _user.collection("Notifications").doc(FirebaseAuth.instance.currentUser.uid).collection("MyNotifications").orderBy("time").get();
 
          data.docs.forEach((element) {
-             _notifyModel=NotifyModel(notification: element.get("notification"));
+             _notifyModel=NotifyModel(notification: element.get("notification"),title: element.get('title'));
              _newList.add(_notifyModel);
          });
          _notifyData=_newList;

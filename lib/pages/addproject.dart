@@ -75,7 +75,7 @@ class _AddprojectState extends State<Addproject> {
                 "skill":skill,
                 'userImage': _userData.currentUserData.userImage,
                 'userName': _userData.currentUserData.firstName,
-                "userUid":"${randomAlphaNumeric(9)}${_userData.currentUserData.uid}",
+                "userUid":_userData.currentUserData.uid,
                 'DateTime': DateTime.now().toIso8601String(),
               };
 

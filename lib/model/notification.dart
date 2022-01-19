@@ -2,5 +2,6 @@
 
 class NotifyModel{
   String notification='';
-  NotifyModel({required this.notification});
+  String title='';
+  NotifyModel({required this.notification,required this.title});
 }
