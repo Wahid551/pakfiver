@@ -48,17 +48,10 @@ class _LoginState extends State<Login> {
       );
       await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      usrmode.gigHomePage==false?
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
           builder: (context) => usermain(),
-        ),
-      ):
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) =>usermain(iindex: 4,),
         ),
       );
     } on FirebaseAuthException catch (e) {

@@ -19,13 +19,13 @@ class usermain extends StatefulWidget {
 }
 
 class _usermainState extends State<usermain> {
-  late int _selectedIndex;
-  @override
-  void initState() {
-    _selectedIndex = widget.iindex??0;
-    // TODO: implement initState
-    super.initState();
-  }
+   int _selectedIndex=0;
+  // @override
+  // void initState() {
+  //   _selectedIndex = widget.iindex??0;
+  //   // TODO: implement initState
+  //   super.initState();
+  // }
   late UserMode usermode;
 
   static List<dynamic> _widgetOptions = <dynamic>[
@@ -34,7 +34,7 @@ class _usermainState extends State<usermain> {
     Addproject(),
     MessageInboxPage(),
     // Menu(),
-    RequestPages(),
+    // RequestPages(),
   ];
   void _onItemTapped(int index) {
     setState(() {
@@ -70,11 +70,11 @@ class _usermainState extends State<usermain> {
             label: 'Inbox',
             backgroundColor: Color.fromARGB(2000, 34, 116, 135),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            label: 'Buyers',
-            backgroundColor: Color.fromARGB(2000, 34, 116, 135),
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.home_outlined),
+          //   label: 'Buyers',
+          //   backgroundColor: Color.fromARGB(2000, 34, 116, 135),
+          // ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.white,

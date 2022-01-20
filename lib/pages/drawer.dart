@@ -116,9 +116,10 @@ class _MyDrawerState extends State<MyDrawer> {
                   onChanged: (value) {
                        // _exchangeProvider.exchangePage();
                       usrmode.Status(value);
-                      // usrmode.exchangePage(value);
-                      usrmode.status==true?
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>usermain(iindex: 4,))):Navigator.of(context).push(MaterialPageRoute(builder: (context)=>usermain(iindex: 0,)));
+                       // usrmode.gigHomePage==false?
+                       // usrmode.exchangePage(true):usrmode.exchangePage(false);
+                    //    usrmode.gigHomePage==true?
+                    // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Home())):Navigator.of(context).push(MaterialPageRoute(builder: (context)=>RequestPages()));
                   },
                   activeTrackColor: Color(0xFF8bd9ad),
                   activeColor: Theme.of(context).accentColor,
